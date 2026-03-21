@@ -26,11 +26,15 @@ To understand basic network configuration and test connectivity using macOS term
 Command used: ifconfig en0
 This command displays the network interface details. The `inet` field shows the assigned IPv4 address.
 
+![IP Config](screenshots/ip-config-en0.png)
+
 ---
 
 ### 2. Identified Default Gateway
 Command used: netstat -nr | grep default
 The default gateway (e.g., 192.168.0.1) represents the router, which connects the local network to the internet.
+
+![Gateway](screenshots/default-gateway.png)
 
 ---
 
@@ -39,6 +43,8 @@ Command used: ping 127.0.0.1
 - This tests the local loopback interface.
 - Successful response confirms that the network stack on the device is working correctly.
 
+![Localhost](screenshots/ping-localhost.png)
+
 ---
 
 ### 4. Tested Router Connectivity
@@ -46,10 +52,14 @@ Command used: ping 192.168.0.1
 - This tests the local loopback interface.
 - Successful response confirms that the network stack on the device is working correctly.
 
+![Router](screenshots/ping-router.png)
+
 ### 5. Tested Internet Connectivity
 Command used: ping 8.8.8.8
 - This tests internet access without using DNS.
 - Since 8.8.8.8 is a public Google DNS server, a successful ping confirms internet connectivity.
+
+![Internet](screenshots/ping-google-dns.png)
 
 ### 6. Tested DNS Resolution
 Commands used: ping google.com
@@ -57,6 +67,9 @@ Commands used: ping google.com
 - `ping google.com` checks if the domain name resolves to an IP address.
 - `nslookup` provides detailed DNS resolution information.
 - Successful results confirm that DNS is functioning correctly.
+
+![Domain](screenshots/ping-domain-google.png)
+![DNS](screenshots/nslookup-google.png)
 
 ---
 
@@ -76,29 +89,3 @@ Commands used: ping google.com
 - Learned how to identify and verify network connectivity step-by-step
 - Understood the role of DNS in resolving domain names to IP addresses
 - Gained practical troubleshooting skills used in IT support roles
-
----
-
-### Screenshots
-
-#### IP Configuration
-![IP Config](screenshots/ip-config-en0.png)
-
-#### Default Gateway
-![Gateway](screenshots/default-gateway.png)
-
-#### Localhost Ping
-![Localhost](screenshots/ping-localhost.png)
-
-#### Router Connectivity
-![Router](screenshots/ping-router.png)
-
-#### Internet Connectivity (Google DNS)
-![Internet](screenshots/ping-google-dns.png)
-
-#### Domain Ping
-![Domain](screenshots/ping-domain-google.png)
-
-#### DNS Lookup
-![DNS](screenshots/nslookup-google.png)
-
